@@ -1,0 +1,5 @@
+env
+node_modules
+cmd.txt
+db.sqlite3
+
