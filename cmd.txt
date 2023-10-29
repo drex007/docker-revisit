@@ -1,0 +1,12 @@
+docker-compose up
+docker-compose build
+docker service start
+docker service restart
+docker service stop
+docker container ls
+dokcer inspect containerId
+docker-compose exec serviceName sh
+docker container start containerId
+docker container stop containerId
+docker rmi containerID
+docker run imageName:imageTag
