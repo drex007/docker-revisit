@@ -1,16 +1,19 @@
 version: '2.2'
 services:
   backend:
-    container_name: microservice_backend
+    container_name: docker2 #container name
     build: 
       context: .
       dockerfile: Dockerfile
     ports:
       - 8000:8000
     volumes:
-      - .:/app
+      - .:/app #Maps our local dir "." to /app in docker
+    command: sh -c "python manage.py runserver 0.0.0.0:8000"
+    environment:
+      - DEBUG=1
     depends_on:
-      - db 
+      - db  
 
 
   db:

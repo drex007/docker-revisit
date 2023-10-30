@@ -1,0 +1,25 @@
+version: '2.2'
+
+services:
+  app:
+    build: 
+      context: .
+    volumes:
+      - static_data:/vol/web
+    environment:
+      - SECRET_KEY=mysecretKey
+      - ALLOWED_HOST=127.0.0.1,localhost
+
+  proxy:
+    build: 
+      context: ./nginx
+      volumes:
+        - static_data:/vol/static_data
+      ports:
+        - "8080:8080"
+      depends_on:
+        - app
+
+
+volumes:
+  static_data:  

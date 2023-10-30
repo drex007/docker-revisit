@@ -10,3 +10,5 @@ docker container start containerId
 docker container stop containerId
 docker rmi containerID
 docker run imageName:imageTag
+docker system prune -a
+docker exec -it containerName /bin/bash
