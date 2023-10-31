@@ -12,3 +12,6 @@ docker rmi containerID
 docker run imageName:imageTag
 docker system prune -a
 docker exec -it containerName /bin/bash
+docker volume ls
+docker volume inspect volumeName
+docker volume prune

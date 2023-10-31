@@ -13,12 +13,12 @@ services:
   proxy:
     build: 
       context: ./nginx
-      volumes:
-        - static_data:/vol/static_data
-      ports:
-        - "8080:8080"
-      depends_on:
-        - app
+    volumes:
+      - static_data:/vol/static_data
+    ports:
+      - "8080:8080"
+    depends_on:
+      - app
 
 
 volumes:
